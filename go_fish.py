@@ -111,3 +111,12 @@ class Hand(object):
 	# returns: nothing
     def draw(self, deck):
         self.add_card(deck.pop_card())
+        
+def play_human_go_fish():
+    # Initial stuff
+    deck = Deck()
+    deck.shuffle()
+    
+    hands = deck.deal(2, 7)
+    
+    # Game itself
