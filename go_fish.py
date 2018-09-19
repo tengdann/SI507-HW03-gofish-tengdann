@@ -1,3 +1,4 @@
+import random
 # Because what even is importing from another file
 class Card(object):
     suit_names =  ["Diamonds","Clubs","Hearts","Spades"]
