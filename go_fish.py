@@ -113,10 +113,17 @@ class Hand(object):
         self.add_card(deck.pop_card())
         
 def play_human_go_fish():
-    # Initial stuff
+    # Initialiing components of game
     deck = Deck()
     deck.shuffle()
     
     hands = deck.deal(2, 7)
     
     # Game itself
+    
+    player_a = int(input("What card do you want to ask for?")) #asking player A
+    for card in hands[0].hand:
+        if player_a not in card.rank_num:
+            player_a = int(input("Ask for rank in your hand. What card do you want to ask for?"))
+        
+    
