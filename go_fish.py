@@ -121,9 +121,14 @@ def play_human_go_fish():
     
     # Game itself
     
-    player_a = int(input("What card do you want to ask for?")) #asking player A
+    player_a = int(input("What card rank do you want from Player B?")) #asking player A
     for card in hands[0].hand:
         if player_a not in card.rank_num:
             player_a = int(input("Ask for rank in your hand. What card do you want to ask for?"))
-        
+        else:
+            player_b = #need to write how player B proceeds
+# need to ask player B to play the card if in hand
+# if player B doesn't have the card - prompt player a to pick card from the pool
+# next it's player B's turn. repeat sequence.
+# code for determining game over (can there be a tie?)
     
