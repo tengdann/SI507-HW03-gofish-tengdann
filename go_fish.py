@@ -1,7 +1,5 @@
 import random
 
-
-# Because what even is importing from another file
 class Card(object):
     suit_names = ["Diamonds", "Clubs", "Hearts", "Spades"]
     rank_levels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -263,6 +261,7 @@ def is_game_ended(book1, book2):
 
 
 def main():
+   #play actual game
     play_human_go_fish()
 
 
