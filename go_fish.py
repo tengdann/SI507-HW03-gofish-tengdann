@@ -197,6 +197,14 @@ def play_human_go_fish():
         print("player A Book - " + str(sorted(book_player_1)))
         print("player B Book - " + str(sorted(book_player_2)))
         print("Game was tied")
+        
+def play_computer_go_fish():
+
+    player_count = int(input("Please enter the number of players you'd like the computer to run (2 - 4): "))
+    
+    while player_count > 4 or player_count < 2:
+        print ("Bad number of players, please try again.")
+        player_count = int(input("Please enter the number of players you'd like the computer to run (2 - 4): "))
 
 # checks for books in the hand object, removes book formed ranks from hand and appends book to book list passed
 def check_book(hand_object, book):
@@ -246,7 +254,7 @@ def matching_rank(hand_object, card_rank_to_check):
 
 # function to get rank of card which one player wants to ask other, he should atleast have one card of rank he is asking
 def ask_player(hand, player_to_ask):
-    card_a = int(input("What card rank do you want from Player " + player_to_ask + "?"))
+    card_a = int(input("What card rank do you want from Player " + player_to_ask + "? "))
     # this card rank should be present in player A hand else ask again
     rank_in_hand = map(lambda x: x.rank_num, hand)
     if card_a not in rank_in_hand:
@@ -263,7 +271,14 @@ def is_game_ended(book1, book2):
 
 
 def main():
-    play_human_go_fish()
+    type = input("Please enter human or computer: ")
+    
+    while lower(type) != "human" or lower(type) != "computer":
+        type = input("Invalid input, please choose human or computer: ")
+    
+    if lower(type) == "human":
+        play_human_go_fish()
+    elif lower(type) == "computer":
 
 
 if __name__ == "__main__":
